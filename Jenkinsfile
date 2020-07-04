@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'master'
+        label 'general'
     }
     environment {
         DOCKER_HUB_USER = credentials('docker-login')
