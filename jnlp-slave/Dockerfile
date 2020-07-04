@@ -5,6 +5,7 @@ USER root
 ENV NPM_VERSION "6.9.2"
 RUN apt update && apt install -y software-properties-common bash curl build-essential
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sSL https://get.docker.com/ | sh
 RUN apt update && apt install -y rsync nodejs zip unzip git make ansible awscli
 RUN npm install npm@${NPM_VERSION} -g
 ENV PATH $PATH/:/root/.local/bin
