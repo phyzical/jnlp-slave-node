@@ -1,7 +1,7 @@
 pipeline {
-//     agent {
-//         label 'vue'
-//     }
+    agent {
+        label 'master'
+    }
     environment {
         DOCKER_HUB_USER = credentials('docker-login')
         DOCKER_HUB_PASSWORD = credentials('docker-password')
