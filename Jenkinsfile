@@ -9,6 +9,7 @@ pipeline {
     }
     stages {
         stage('Checkout infra') {
+            when { tag "v*" }
             steps {
                 sh 'echo StrictHostKeyChecking no > ~/.ssh/config'
                 withCredentials([sshUserPrivateKey(credentialsId: 'ssh', keyFileVariable: 'SSH_KEY')]) {
